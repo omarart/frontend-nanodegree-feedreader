@@ -31,17 +31,11 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it(' it has a URL defined and is not empty', function() {
-            // var sizeFeeds = allFeeds.length;
-            // var i = 0;
-            // for( ; i < sizeFeeds; i++ ) {
-            //     expect(allFeeds[i].url).toBeDefined;
-            //     expect(allFeeds[i].url.length).not.toBe(0);
-            // }
+        it(' it has a Url defined and is not empty', function() {
             allFeeds.forEach(function(feed){
-                expect(feed.url).toBeDefined;
+                expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0);
-            })
+            });
         });
 
 
@@ -50,16 +44,10 @@ $(function() {
          * and that the name is not empty.
          */
         it(' it has a Name defined and is not empty', function() {
-            // var sizeFeeds = allFeeds.length;
-            // var i = 0;
-            // for( ; i < sizeFeeds; i++ ) {
-            //     expect(allFeeds[i].name).toBeDefined;
-            //     expect(allFeeds[i].name.length).not.toBe(0);
-            // }
             allFeeds.forEach(function(feed){
-                expect(feed.name).toBeDefined;
+                expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
-            })
+            });
         });
     });
 
@@ -73,7 +61,7 @@ $(function() {
          */
         it('menu element is hidden', function(){
             expect($('body').hasClass('menu-hidden')).not.toBe(false);
-        })
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -89,7 +77,7 @@ $(function() {
                 expect($('body').hasClass('menu-hidden')).toBe(true);
               }
               $('.menu-icon-link').click(); 
-          })
+          });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -107,7 +95,7 @@ $(function() {
         it('loadFeed is called', function(){
             var entries = $('.feed .entry');
             expect(entries.length).not.toBe(0);
-        })
+        });
 
     });
 
